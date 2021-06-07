@@ -132,4 +132,23 @@ class Product
     }
 
 
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtAutomatically()
+    {
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime());
+        }
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtAutomatically()
+    {
+        $this->setUpdatedAt(new DateTime());
+    }
+
+
 }
