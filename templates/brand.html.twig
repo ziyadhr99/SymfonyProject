@@ -174,27 +174,6 @@ body{
     <!-- brand -->
     <div class="brand">
         <div class="container">
-            <!-- barre de recherche --> 
-            {{ form_start(form)}}
-            <form method='Post'>
-                <div class="wrap">
-                    <div class="search">
-                            {{ form_row(form.product ,
-                                {'attr': { class:"searchTerm" ,placeholder:"What are you looking for?"},
-                                  label : ' '
-                                }) }}
-
-                            {{ form_row(form.search, 
-                               {'attr': { class:"searchButton" },
-                               label : ' '
-                            }) }}
-                        <!--
-                        <button type="submit" class="searchButton">
-                            <i class="fa fa-search"></i>
-                        </button> -->
-                    </div>
-                </div>
-            </form>
 
         </div>
 

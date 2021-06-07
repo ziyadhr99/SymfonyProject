@@ -26,8 +26,6 @@ class ProductController extends AbstractController
     {   
         $products = $productRepository->findLimit(6);
 
-
-            
         return $this->render('index.html.twig', [
             'products' => $products,
         ]);
@@ -39,24 +37,13 @@ class ProductController extends AbstractController
     public function indexAll(ProductRepository $productRepository, CategoryRepository $CategoryRepository): Response
     {   
         $products = $productRepository->findAll();
-        $form = $this->createFormBuilder()
-            ->add('product',TextType::class)
-            ->add('search',SubmitType::class)
-            ->getForm();
-        
-        if ($form->isSubmitted()) {
 
-            dd($form);
-        }
         return $this->render('brand.html.twig', [
             'products' => $products,
-            'form' => $form->createView()
         ]);
     }
 
-    /**
-     * @Route("/new", name="product_new", methods={"GET","POST"})
-     */
+    
     public function new(Request $request): Response
     {
         $product = new Product();

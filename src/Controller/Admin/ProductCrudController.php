@@ -29,7 +29,7 @@ class ProductCrudController extends AbstractCrudController
             TextEditorField::new('description'),
             IntegerField::new('Price'),
             ImageField::new('image')->setUploadDir('public/uploads')->setFormType(FileUploadType::class)->setRequired(false),
-            DateTimeField::new('created_at'),
+            //DateTimeField::new('created_at'),
             AssociationField::new('category')
         ];
     }
