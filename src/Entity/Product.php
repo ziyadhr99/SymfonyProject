@@ -142,13 +142,6 @@ class Product
         }
     }
 
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setUpdatedAtAutomatically()
-    {
-        $this->setUpdatedAt(new DateTime());
-    }
 
 
 }
