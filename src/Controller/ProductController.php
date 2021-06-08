@@ -128,4 +128,8 @@ class ProductController extends AbstractController
         dd($request);
         return $this->redirectToRoute('product_index');
     }
+
+    public function about(): ?Response{
+        return $this->render('about.html.twig');
+    }
 }
